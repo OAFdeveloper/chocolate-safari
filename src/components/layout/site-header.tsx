@@ -31,11 +31,11 @@ export function SiteHeader({ settings }: { settings: SiteSettings }) {
   }
 
   return (
-    <header className="sticky top-0 z-50 border-b border-border/60 bg-bg-base/85 backdrop-blur-md">
+    <header className="sticky top-0 z-50 border-b border-border/40 bg-bg-base/70 backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-7xl items-center gap-4 px-4 sm:px-6 lg:px-8">
         <Logo className="shrink-0" />
 
-        <nav className="hidden flex-1 items-center justify-center gap-5 xl:flex">
+        <nav className="hidden flex-1 items-center justify-center gap-5 lg:flex">
           {settings.navLinks.map((link) => {
             const active =
               link.href === "/"
@@ -99,7 +99,7 @@ export function SiteHeader({ settings }: { settings: SiteSettings }) {
 
         <Sheet open={open} onOpenChange={setOpen}>
           <SheetTrigger
-            className="ml-auto inline-flex size-9 items-center justify-center rounded-lg text-text-on-dark transition hover:bg-bg-elevated xl:hidden"
+            className="ml-auto inline-flex size-9 items-center justify-center rounded-lg text-text-on-dark transition hover:bg-bg-elevated lg:hidden"
             aria-label="Open menu"
           >
             <Menu className="size-5" />

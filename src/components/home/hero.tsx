@@ -19,7 +19,7 @@ const statIcons = {
 
 export function Hero({ settings }: { settings: SiteSettings }) {
   return (
-    <section className="relative isolate min-h-[min(92vh,820px)] overflow-hidden">
+    <section className="relative isolate -mt-16 min-h-[min(100vh,880px)] overflow-hidden pt-16">
       <Image
         src={settings.heroImage}
         alt="Dark chocolate squares beside a vintage brass compass"
@@ -28,13 +28,14 @@ export function Hero({ settings }: { settings: SiteSettings }) {
         className="object-cover object-center"
         sizes="100vw"
       />
-      <div className="absolute inset-0 bg-gradient-to-r from-bg-base/90 via-bg-base/70 to-bg-base/40" />
-      <div className="absolute inset-0 bg-bg-base/35" />
+      <div className="absolute inset-0 bg-gradient-to-r from-bg-base/92 via-bg-base/72 to-bg-base/35" />
+      <div className="absolute inset-0 bg-bg-base/30" />
 
-      <div className="relative mx-auto flex min-h-[min(92vh,820px)] max-w-7xl flex-col justify-center px-4 py-20 sm:px-6 lg:px-8">
+      <div className="relative mx-auto flex min-h-[min(100vh,880px)] max-w-7xl flex-col justify-center px-4 py-20 sm:px-6 lg:px-8">
         <div className="max-w-2xl">
           <h1 className="animate-hero-rise font-display text-[clamp(2.75rem,7vw,4.5rem)] leading-[1.05] tracking-tight text-text-on-dark">
-            {settings.heroHeadline.discover} {settings.heroHeadline.taste}{" "}
+            {settings.heroHeadline.discover} {settings.heroHeadline.taste}
+            <br />
             <span className="text-brass">{settings.heroHeadline.remember}</span>
           </h1>
           <p className="animate-hero-rise-delay mt-5 max-w-xl text-base leading-relaxed text-text-muted sm:text-lg">
