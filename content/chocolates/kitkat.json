@@ -1,0 +1,20 @@
+{
+  "slug": "kitkat",
+  "title": "KitKat",
+  "brand": "Nestlé",
+  "shortDescription": "Crispy wafer fingers snapped into milk chocolate.",
+  "description": "KitKat is the reference crispy bar — light wafer layers and a clean snap. Ideal for calibrating crunch against denser filled chocolates in your tasting log.",
+  "image": "/images/chocolates/kitkat.jpg",
+  "gallery": [],
+  "originCountry": "Japan",
+  "originCode": "JP",
+  "originFlagEmoji": "🇯🇵",
+  "tags": ["Crispy", "Smooth"],
+  "rating": 4.2,
+  "price": 1.1,
+  "currency": "USD",
+  "featured": true,
+  "recentRank": 3,
+  "publishedAt": "2026-09-22T10:00:00.000Z",
+  "status": "published"
+}

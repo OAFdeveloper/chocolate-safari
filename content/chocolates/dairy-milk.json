@@ -1,0 +1,20 @@
+{
+  "slug": "dairy-milk",
+  "title": "Dairy Milk",
+  "brand": "Cadbury",
+  "shortDescription": "Creamy milk chocolate with a familiar cocoa sweetness.",
+  "description": "Cadbury Dairy Milk sets the milky, rounded baseline for many tasters. Note its softness and sweetness when contrasting against darker, more austere bars.",
+  "image": "/images/chocolates/dairy-milk.jpg",
+  "gallery": [],
+  "originCountry": "United Kingdom",
+  "originCode": "GB",
+  "originFlagEmoji": "🇬🇧",
+  "tags": ["Smooth", "Fruity"],
+  "rating": 4.4,
+  "price": 1.5,
+  "currency": "USD",
+  "featured": true,
+  "recentRank": 4,
+  "publishedAt": "2026-09-28T10:00:00.000Z",
+  "status": "published"
+}

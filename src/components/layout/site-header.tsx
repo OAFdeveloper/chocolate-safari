@@ -1,0 +1,149 @@
+"use client";
+
+import Link from "next/link";
+import { usePathname, useRouter } from "next/navigation";
+import { Bookmark, Menu, Search } from "lucide-react";
+import { FormEvent, useState } from "react";
+import type { SiteSettings } from "@/lib/schemas";
+import { Logo } from "@/components/brand/logo";
+import { Input } from "@/components/ui/input";
+import {
+  Sheet,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
+import { cn } from "@/lib/utils";
+import Image from "next/image";
+
+export function SiteHeader({ settings }: { settings: SiteSettings }) {
+  const pathname = usePathname();
+  const router = useRouter();
+  const [query, setQuery] = useState("");
+  const [open, setOpen] = useState(false);
+
+  function onSearch(event: FormEvent) {
+    event.preventDefault();
+    const q = query.trim();
+    router.push(q ? `/explore?q=${encodeURIComponent(q)}` : "/explore");
+    setOpen(false);
+  }
+
+  return (
+    <header className="sticky top-0 z-50 border-b border-border/60 bg-bg-base/85 backdrop-blur-md">
+      <div className="mx-auto flex h-16 max-w-7xl items-center gap-4 px-4 sm:px-6 lg:px-8">
+        <Logo className="shrink-0" />
+
+        <nav className="hidden flex-1 items-center justify-center gap-5 xl:flex">
+          {settings.navLinks.map((link) => {
+            const active =
+              link.href === "/"
+                ? pathname === "/"
+                : pathname.startsWith(link.href.replace("/#sommelier", "/sommelier")) ||
+                  (link.href.includes("#") && pathname === "/");
+            return (
+              <Link
+                key={link.href + link.label}
+                href={link.href}
+                className={cn(
+                  "text-[13px] text-text-muted transition-colors hover:text-brass",
+                  active && "text-brass"
+                )}
+              >
+                {link.label}
+              </Link>
+            );
+          })}
+        </nav>
+
+        <div className="ml-auto hidden items-center gap-3 md:flex">
+          <form onSubmit={onSearch} className="relative">
+            <Search className="pointer-events-none absolute left-3 top-1/2 size-3.5 -translate-y-1/2 text-text-muted" />
+            <Input
+              value={query}
+              onChange={(event) => setQuery(event.target.value)}
+              placeholder="Search chocolates..."
+              className="h-9 w-48 rounded-full border-border bg-bg-elevated pl-9 text-[13px] text-text-on-dark placeholder:text-text-muted lg:w-56"
+              aria-label="Search chocolates"
+            />
+          </form>
+          <Link
+            href="/coming-soon/saved"
+            aria-label="Saved chocolates"
+            className="inline-flex size-9 items-center justify-center rounded-full border border-border text-text-muted transition hover:border-brass hover:text-brass"
+          >
+            <Bookmark className="size-4" />
+          </Link>
+          <Link
+            href="/coming-soon/tasting-log"
+            className="hidden items-center gap-2.5 rounded-full border border-border bg-bg-elevated py-1 pl-1 pr-3 transition hover:border-brass lg:inline-flex"
+          >
+            <Image
+              src={settings.tastingLog.avatar}
+              alt=""
+              width={30}
+              height={30}
+              className="size-[30px] rounded-full object-cover"
+            />
+            <span className="leading-tight">
+              <span className="block text-[12px] font-medium text-text-on-dark">
+                {settings.tastingLog.title}
+              </span>
+              <span className="block text-[11px] text-text-muted">
+                {settings.tastingLog.countLabel}
+              </span>
+            </span>
+          </Link>
+        </div>
+
+        <Sheet open={open} onOpenChange={setOpen}>
+          <SheetTrigger
+            className="ml-auto inline-flex size-9 items-center justify-center rounded-lg text-text-on-dark transition hover:bg-bg-elevated xl:hidden"
+            aria-label="Open menu"
+          >
+            <Menu className="size-5" />
+          </SheetTrigger>
+          <SheetContent
+            side="right"
+            className="border-border bg-bg-elevated text-text-on-dark"
+          >
+            <SheetHeader>
+              <SheetTitle className="font-display text-left text-text-on-dark">
+                Menu
+              </SheetTitle>
+            </SheetHeader>
+            <div className="mt-6 flex flex-col gap-4 px-1">
+              <form onSubmit={onSearch} className="relative">
+                <Search className="pointer-events-none absolute left-3 top-1/2 size-3.5 -translate-y-1/2 text-text-muted" />
+                <Input
+                  value={query}
+                  onChange={(event) => setQuery(event.target.value)}
+                  placeholder="Search chocolates..."
+                  className="h-10 rounded-full border-border bg-bg-base pl-9"
+                />
+              </form>
+              {settings.navLinks.map((link) => (
+                <Link
+                  key={link.href + link.label}
+                  href={link.href}
+                  onClick={() => setOpen(false)}
+                  className="text-sm text-text-muted transition hover:text-brass"
+                >
+                  {link.label}
+                </Link>
+              ))}
+              <Link
+                href="/coming-soon/tasting-log"
+                onClick={() => setOpen(false)}
+                className="text-sm text-text-muted transition hover:text-brass"
+              >
+                My Tasting Log
+              </Link>
+            </div>
+          </SheetContent>
+        </Sheet>
+      </div>
+    </header>
+  );
+}

@@ -1,0 +1,158 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--bg-base);
+  --color-foreground: var(--text-on-dark);
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-heading: var(--font-display);
+  --color-sidebar-ring: var(--accent-brass);
+  --color-sidebar-border: var(--border-subtle);
+  --color-sidebar-accent-foreground: var(--text-on-dark);
+  --color-sidebar-accent: var(--bg-elevated);
+  --color-sidebar-primary-foreground: var(--bg-base);
+  --color-sidebar-primary: var(--accent-brass);
+  --color-sidebar-foreground: var(--text-on-dark);
+  --color-sidebar: var(--bg-elevated);
+  --color-chart-5: var(--accent-brass);
+  --color-chart-4: var(--text-muted-dark);
+  --color-chart-3: var(--bg-cream);
+  --color-chart-2: var(--tag-bg);
+  --color-chart-1: var(--accent-brass);
+  --color-ring: var(--accent-brass);
+  --color-input: var(--border-subtle);
+  --color-border: var(--border-subtle);
+  --color-destructive: oklch(0.577 0.245 27.325);
+  --color-accent-foreground: var(--bg-base);
+  --color-accent: var(--accent-brass);
+  --color-muted-foreground: var(--text-muted-dark);
+  --color-muted: var(--bg-elevated);
+  --color-secondary-foreground: var(--text-on-dark);
+  --color-secondary: var(--tag-bg);
+  --color-primary-foreground: var(--bg-base);
+  --color-primary: var(--accent-brass);
+  --color-popover-foreground: var(--text-on-dark);
+  --color-popover: var(--bg-elevated);
+  --color-card-foreground: var(--text-on-dark);
+  --color-card: var(--bg-elevated);
+
+  --color-bg-base: var(--bg-base);
+  --color-bg-elevated: var(--bg-elevated);
+  --color-bg-cream: var(--bg-cream);
+  --color-brass: var(--accent-brass);
+  --color-brass-hover: var(--accent-brass-hover);
+  --color-text-on-dark: var(--text-on-dark);
+  --color-text-muted: var(--text-muted-dark);
+  --color-text-cream: var(--text-on-cream);
+  --color-tag: var(--tag-bg);
+  --color-chat-user: var(--chat-user);
+  --color-chat-ai: var(--chat-ai);
+
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
+}
+
+:root {
+  --bg-base: #100000;
+  --bg-elevated: #1a1512;
+  --bg-cream: #efe8d8;
+  --accent-brass: #c29961;
+  --accent-brass-hover: #d4af78;
+  --text-on-dark: #f5f0e8;
+  --text-muted-dark: #a89b8c;
+  --text-on-cream: #2a1f18;
+  --border-subtle: rgba(194, 153, 97, 0.25);
+  --rating-star: #c29961;
+  --tag-bg: #2a211c;
+  --chat-user: rgba(194, 153, 97, 0.22);
+  --chat-ai: #241c18;
+  --radius: 0.75rem;
+
+  --background: var(--bg-base);
+  --foreground: var(--text-on-dark);
+  --card: var(--bg-elevated);
+  --card-foreground: var(--text-on-dark);
+  --popover: var(--bg-elevated);
+  --popover-foreground: var(--text-on-dark);
+  --primary: var(--accent-brass);
+  --primary-foreground: #100000;
+  --secondary: var(--tag-bg);
+  --secondary-foreground: var(--text-on-dark);
+  --muted: var(--bg-elevated);
+  --muted-foreground: var(--text-muted-dark);
+  --accent: var(--accent-brass);
+  --accent-foreground: #100000;
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: var(--border-subtle);
+  --input: var(--border-subtle);
+  --ring: var(--accent-brass);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-bg-base text-foreground;
+  }
+  html {
+    @apply font-sans scroll-smooth;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: var(--font-display), ui-serif, Georgia, serif;
+  }
+
+  .section-label {
+    @apply font-sans text-[11px] font-medium uppercase tracking-[0.18em] text-brass;
+  }
+
+  .animate-hero-rise {
+    animation: hero-rise 0.9s ease-out both;
+  }
+
+  .animate-hero-rise-delay {
+    animation: hero-rise 0.9s ease-out 0.15s both;
+  }
+
+  .animate-hero-rise-delay-2 {
+    animation: hero-rise 0.9s ease-out 0.3s both;
+  }
+
+  .animate-panel-in {
+    animation: panel-in 0.7s ease-out both;
+  }
+}
+
+@keyframes hero-rise {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes panel-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.985);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}

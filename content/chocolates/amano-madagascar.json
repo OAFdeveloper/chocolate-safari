@@ -1,0 +1,20 @@
+{
+  "slug": "amano-madagascar",
+  "title": "Amano Madagascar",
+  "brand": "Amano",
+  "shortDescription": "Bright berry acidity over fine dark cacao.",
+  "description": "A fruity single-origin style bar for explorers chasing red-fruit notes and lively acidity. Excellent contrast after milkier everyday chocolates.",
+  "image": "/images/chocolates/tokara-dark.jpg",
+  "gallery": [],
+  "originCountry": "Madagascar",
+  "originCode": "MG",
+  "originFlagEmoji": "🇲🇬",
+  "tags": ["Fruity", "Dark"],
+  "rating": 4.8,
+  "price": 6.5,
+  "currency": "USD",
+  "featured": false,
+  "recentRank": 6,
+  "publishedAt": "2026-10-05T10:00:00.000Z",
+  "status": "published"
+}

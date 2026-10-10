@@ -1,0 +1,20 @@
+{
+  "slug": "tokara-dark",
+  "title": "Tokara Dark",
+  "brand": "Tokara",
+  "shortDescription": "Cocoa-forward dark bar with a clean, lingering finish.",
+  "description": "Tokara Dark leans into roasted cocoa and a dry finish. A strong entry when you want to practice dark-chocolate vocabulary beyond supermarket milk bars.",
+  "image": "/images/chocolates/tokara-dark.jpg",
+  "gallery": [],
+  "originCountry": "South Africa",
+  "originCode": "ZA",
+  "originFlagEmoji": "🇿🇦",
+  "tags": ["Dark", "Fruity"],
+  "rating": 4.7,
+  "price": 3.8,
+  "currency": "USD",
+  "featured": true,
+  "recentRank": 5,
+  "publishedAt": "2026-10-02T10:00:00.000Z",
+  "status": "published"
+}

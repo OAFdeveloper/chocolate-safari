@@ -1,0 +1,166 @@
+{
+  "siteName": "Chocolate Safari",
+  "heroHeadline": {
+    "discover": "Discover.",
+    "taste": "Taste.",
+    "remember": "Remember."
+  },
+  "heroSubcopy": "Your personal catalogue for tasting notes, rare finds, and the chocolates that stay with you long after the last square.",
+  "heroImage": "/images/hero.jpg",
+  "stats": [
+    { "label": "Chocolates", "value": "627", "icon": "candy" },
+    { "label": "Countries", "value": "43", "icon": "globe" },
+    { "label": "Reviews", "value": "1,284", "icon": "star" },
+    { "label": "Discoveries", "value": "∞", "icon": "infinity" }
+  ],
+  "navLinks": [
+    { "label": "Explore", "href": "/explore" },
+    { "label": "Reviews", "href": "/reviews" },
+    { "label": "Collections", "href": "/collections" },
+    { "label": "AI Sommelier", "href": "/#sommelier" },
+    { "label": "Guides", "href": "/guides" },
+    { "label": "Community", "href": "/community" }
+  ],
+  "valueProps": [
+    {
+      "icon": "clipboard",
+      "title": "Document Every Detail",
+      "blurb": "Capture taste notes, origin, cacao %, and price in one place."
+    },
+    {
+      "icon": "scales",
+      "title": "Compare & Remember",
+      "blurb": "Stack bars side by side so favorites never blur together."
+    },
+    {
+      "icon": "pot",
+      "title": "Discover the Unusual",
+      "blurb": "Hunt obscure origins, limited drops, and regional classics."
+    },
+    {
+      "icon": "notebook",
+      "title": "Personal Tasting Log",
+      "blurb": "Rate, review, and keep a living journal of every bite."
+    },
+    {
+      "icon": "sparkles",
+      "title": "AI-Powered Recommendations",
+      "blurb": "Ask the Sommelier for your next perfect square."
+    }
+  ],
+  "upcomingFeatures": [
+    {
+      "icon": "trophy",
+      "title": "Rankings",
+      "blurb": "Community-driven leaderboards by origin, style, and season.",
+      "slug": "rankings",
+      "comingSoon": true
+    },
+    {
+      "icon": "columns",
+      "title": "Comparisons",
+      "blurb": "Line up tasting notes and scores for side-by-side decisions.",
+      "slug": "comparisons",
+      "comingSoon": true
+    },
+    {
+      "icon": "book",
+      "title": "Guides",
+      "blurb": "Editorial paths through cacao regions and flavor families.",
+      "slug": "guides",
+      "comingSoon": true
+    },
+    {
+      "icon": "users",
+      "title": "Community",
+      "blurb": "Share finds, ask questions, and trade recommendations.",
+      "slug": "community",
+      "comingSoon": true
+    },
+    {
+      "icon": "building",
+      "title": "Brand Stories",
+      "blurb": "Meet the makers behind the bars you love.",
+      "slug": "brand-stories",
+      "comingSoon": true
+    }
+  ],
+  "footerAbout": "Chocolate Safari is a tasting catalogue for curious palates — document every bar, remember every note, and discover what comes next.",
+  "footerColumns": [
+    {
+      "title": "Explore",
+      "links": [
+        { "label": "All Chocolates", "href": "/explore" },
+        { "label": "New Discoveries", "href": "/explore?sort=recent" },
+        { "label": "AI Sommelier", "href": "/sommelier" },
+        { "label": "Collections", "href": "/collections" }
+      ]
+    },
+    {
+      "title": "About",
+      "links": [
+        { "label": "Mission", "href": "/coming-soon/mission" },
+        { "label": "How it Works", "href": "/coming-soon/how-it-works" },
+        { "label": "AI Sommelier", "href": "/sommelier" },
+        { "label": "Contact", "href": "/coming-soon/contact" }
+      ]
+    },
+    {
+      "title": "Account",
+      "links": [
+        { "label": "My Tasting Log", "href": "/coming-soon/tasting-log" },
+        { "label": "Saved Bars", "href": "/coming-soon/saved" },
+        { "label": "Reviews", "href": "/reviews" },
+        { "label": "Community", "href": "/community" }
+      ]
+    }
+  ],
+  "socialLinks": [
+    { "label": "Instagram", "href": "https://instagram.com", "icon": "instagram" },
+    { "label": "X", "href": "https://x.com", "icon": "twitter" },
+    { "label": "YouTube", "href": "https://youtube.com", "icon": "youtube" }
+  ],
+  "sommelier": {
+    "name": "Amara",
+    "title": "AI Chocolate Sommelier",
+    "portrait": "/images/sommelier.jpg",
+    "intro": "Tell me what you crave — fruit, roast, crunch, or silk — and I’ll map a tasting path through the catalogue.",
+    "defaultTags": ["Fruity", "Dark", "Nutty", "Caramel", "Crispy", "Smooth"],
+    "starterPrompts": [
+      "I want something nutty with caramel.",
+      "Surprise me with a dark bar under $3.",
+      "What should I try from South Africa?"
+    ],
+    "chatPreview": {
+      "user": "Something nutty with a soft caramel finish?",
+      "ai": "Start with Lunch Bar — peanuts, caramel, and wafer in a nostalgic bite. Then try Mars if you want more nougat softness."
+    },
+    "cannedReplies": [
+      {
+        "tags": ["Nutty", "Caramel"],
+        "reply": "Lean into Lunch Bar for peanut-caramel crunch, then Mars for a softer nougat finish. Both sit well as everyday tasting anchors."
+      },
+      {
+        "tags": ["Dark"],
+        "reply": "Reach for Tokara Dark — cocoa-forward with a clean finish. If you want something more approachable, Dairy Milk eases you back toward cream."
+      },
+      {
+        "tags": ["Crispy"],
+        "reply": "KitKat is the classic crispy wafer path. Pair it with Lunch Bar if you want nuts and caramel in the same session."
+      },
+      {
+        "tags": ["Fruity", "Smooth"],
+        "reply": "Dairy Milk keeps things smooth and milky. For contrast later, note how fruit-leaning dark bars brighten against that creaminess."
+      },
+      {
+        "tags": [],
+        "reply": "Share a flavor direction — Fruity, Dark, Nutty, Caramel, Crispy, or Smooth — and I’ll pick a short tasting flight from the catalogue."
+      }
+    ]
+  },
+  "tastingLog": {
+    "title": "My Tasting Log",
+    "countLabel": "127 chocolates",
+    "avatar": "/images/sommelier.jpg"
+  }
+}

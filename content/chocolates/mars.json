@@ -1,0 +1,20 @@
+{
+  "slug": "mars",
+  "title": "Mars",
+  "brand": "Mars",
+  "shortDescription": "Soft nougat and caramel under a milk chocolate shell.",
+  "description": "Mars delivers a plush nougat core and flowing caramel beneath milk chocolate. Use it as a baseline for caramel intensity and chew when comparing softer filled bars.",
+  "image": "/images/chocolates/mars.jpg",
+  "gallery": [],
+  "originCountry": "United Kingdom",
+  "originCode": "GB",
+  "originFlagEmoji": "🇬🇧",
+  "tags": ["Caramel", "Smooth", "Nutty"],
+  "rating": 4.3,
+  "price": 1.35,
+  "currency": "USD",
+  "featured": true,
+  "recentRank": 2,
+  "publishedAt": "2026-09-18T10:00:00.000Z",
+  "status": "published"
+}

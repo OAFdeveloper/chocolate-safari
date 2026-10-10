@@ -1,0 +1,20 @@
+{
+  "slug": "lunch-bar",
+  "title": "Lunch Bar",
+  "brand": "Beacon",
+  "shortDescription": "Peanuts, caramel and wafer in a nostalgic South African classic.",
+  "description": "Lunch Bar is a childhood staple reimagined as a tasting note: roasted peanuts, soft caramel, and a light wafer crunch wrapped in milk chocolate. Perfect for documenting texture contrast and everyday comfort bars.",
+  "image": "/images/chocolates/lunch-bar.jpg",
+  "gallery": [],
+  "originCountry": "South Africa",
+  "originCode": "ZA",
+  "originFlagEmoji": "🇿🇦",
+  "tags": ["Nutty", "Caramel", "Crispy"],
+  "rating": 4.5,
+  "price": 1.2,
+  "currency": "USD",
+  "featured": true,
+  "recentRank": 1,
+  "publishedAt": "2026-09-12T10:00:00.000Z",
+  "status": "published"
+}
