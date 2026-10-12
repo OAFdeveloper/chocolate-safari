@@ -25,27 +25,27 @@
     {
       "icon": "clipboard",
       "title": "Document Every Detail",
-      "blurb": "Capture taste notes, origin, cacao %, and price in one place."
+      "blurb": "Taste notes, ingredients, origin, and price in one place."
     },
     {
       "icon": "scales",
       "title": "Compare & Remember",
-      "blurb": "Stack bars side by side so favorites never blur together."
+      "blurb": "See how chocolates stack up side by side."
     },
     {
       "icon": "pot",
       "title": "Discover the Unusual",
-      "blurb": "Hunt obscure origins, limited drops, and regional classics."
+      "blurb": "Find rare and limited chocolates from around the world."
     },
     {
       "icon": "notebook",
       "title": "Personal Tasting Log",
-      "blurb": "Rate, review, and keep a living journal of every bite."
+      "blurb": "Your space to rate, review, and remember every bite."
     },
     {
       "icon": "sparkles",
       "title": "AI-Powered Recommendations",
-      "blurb": "Ask the Sommelier for your next perfect square."
+      "blurb": "Personalized suggestions from the Chocolate Sommelier."
     }
   ],
   "upcomingFeatures": [
