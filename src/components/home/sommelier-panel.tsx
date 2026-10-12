@@ -106,8 +106,11 @@ export function SommelierPanel({
         <div>
           <p className="section-label inline-flex items-center gap-2">
             <Star className="size-3.5 fill-current" />
-            Meet your guide — {settings.title}
+            Meet your guide
           </p>
+          <h2 className="mt-2 font-display text-2xl tracking-tight text-text-on-dark sm:text-[1.75rem]">
+            {settings.title}
+          </h2>
           <p className="mt-3 max-w-xl text-sm leading-relaxed text-text-muted sm:text-base">
             {settings.intro}
           </p>

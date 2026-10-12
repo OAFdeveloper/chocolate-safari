@@ -1,6 +1,6 @@
 # Content (Git-based CMS)
 
-Edit JSON in this folder to update the site without changing React code.
+Edit JSON in this folder to update the site without changing React code, or use the **Keystatic** admin at `/keystatic` while `npm run dev` is running (writes to the same files).
 
 ## Site settings
 

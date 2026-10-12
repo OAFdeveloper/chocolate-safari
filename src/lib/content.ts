@@ -48,8 +48,15 @@ export async function getChocolateBySlug(
 
 export async function getRecentDiscoveries(limit = 5): Promise<Chocolate[]> {
   const chocolates = await getChocolates();
-  return chocolates
-    .filter((item) => item.recentRank != null || item.featured)
+  return [...chocolates]
+    .sort((a, b) => {
+      const rankA = a.recentRank ?? Number.MAX_SAFE_INTEGER;
+      const rankB = b.recentRank ?? Number.MAX_SAFE_INTEGER;
+      if (rankA !== rankB) return rankA - rankB;
+      return (
+        new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime()
+      );
+    })
     .slice(0, limit);
 }
 
