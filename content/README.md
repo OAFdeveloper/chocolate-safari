@@ -4,7 +4,7 @@ Edit JSON in this folder to update the site without changing React code, or use 
 
 ## Site settings
 
-`site-settings.json` controls:
+`content/site-settings.json` (flat file — Keystatic path `content/site-settings` with **no** trailing slash; not `content/site-settings/index.json`) controls:
 
 - Hero headline / subcopy / image
 - Stats, nav links, value props, upcoming features

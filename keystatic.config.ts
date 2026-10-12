@@ -6,12 +6,23 @@ const linkFields = {
 };
 
 const chocolateSchema = {
-  slug: fields.text({ label: "Slug" }),
-  title: fields.text({ label: "Title" }),
-  brand: fields.text({ label: "Brand" }),
-  shortDescription: fields.text({ label: "Short description", multiline: true }),
-  description: fields.text({ label: "Description", multiline: true }),
-  image: fields.text({ label: "Image path (under /public)" }),
+  slug: fields.slug({ name: { label: "Slug" } }),
+  title: fields.text({ label: "Title", validation: { isRequired: true } }),
+  brand: fields.text({ label: "Brand", validation: { isRequired: true } }),
+  shortDescription: fields.text({
+    label: "Short description",
+    multiline: true,
+    validation: { isRequired: true },
+  }),
+  description: fields.text({
+    label: "Description",
+    multiline: true,
+    validation: { isRequired: true },
+  }),
+  image: fields.text({
+    label: "Image path (under /public)",
+    validation: { isRequired: true },
+  }),
   gallery: fields.array(fields.text({ label: "Image path" }), {
     label: "Gallery",
   }),
@@ -19,10 +30,18 @@ const chocolateSchema = {
   originCode: fields.text({ label: "Origin code (ISO)" }),
   originFlagEmoji: fields.text({ label: "Flag emoji" }),
   tags: fields.array(fields.text({ label: "Tag" }), { label: "Flavor tags" }),
-  rating: fields.number({ label: "Rating (0–5)", step: 0.1 }),
-  price: fields.number({ label: "Price", step: 0.01 }),
+  rating: fields.number({
+    label: "Rating (0–5)",
+    step: 0.1,
+    validation: { min: 0, max: 5, isRequired: true },
+  }),
+  price: fields.number({
+    label: "Price",
+    step: 0.01,
+    validation: { isRequired: true },
+  }),
   currency: fields.text({ label: "Currency", defaultValue: "USD" }),
-  featured: fields.checkbox({ label: "Featured" }),
+  featured: fields.checkbox({ label: "Featured", defaultValue: false }),
   recentRank: fields.integer({
     label: "Recent rank (home grid; lower = earlier)",
   }),
