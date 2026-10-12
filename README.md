@@ -23,7 +23,7 @@ Open [http://127.0.0.1:43127](http://127.0.0.1:43127).
 1. Start the dev server.
 2. Open **[http://127.0.0.1:43127/keystatic](http://127.0.0.1:43127/keystatic)**.
 3. Edit **Site settings** (hero, stats, sommelier, footer) or **Chocolates** (catalogue).
-4. Save — Keystatic writes to `content/site-settings.json` and `content/chocolates/*.json`. Refresh the site to see changes.
+4. Save — Keystatic writes to `content/site-settings/index.json` and `content/chocolates/*.json`. Refresh the site to see changes.
 
 For production on Vercel with Git-backed editing, set storage to GitHub in `keystatic.config.ts` and configure:
 

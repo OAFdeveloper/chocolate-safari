@@ -12,7 +12,7 @@ const reader = createReader(process.cwd(), keystaticConfig);
 export async function getSiteSettings(): Promise<SiteSettings> {
   const raw = await reader.singletons.siteSettings.read();
   if (!raw) {
-    throw new Error("Missing site settings (content/site-settings.json)");
+    throw new Error("Missing site settings (content/site-settings/index.json)");
   }
   return siteSettingsSchema.parse(raw);
 }
